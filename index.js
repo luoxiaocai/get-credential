@@ -13,9 +13,13 @@ app.use(cors());
 app.use(logger);
 
 // 首页
-app.get("/", async (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
+// app.get("/", async (req, res) => {
+//   res.sendFile(path.join(__dirname, "index.html"));
+// });
+
+app.get('/', async (req, res) => {
+  res.send('这是小菜做的')
+})
 
 // 更新计数
 app.post("/api/count", async (req, res) => {
